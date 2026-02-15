@@ -6,24 +6,28 @@ const crewMembers = [
     role: "Начальник станции",
     description: "Руководил всей деятельностью станции, координировал научную работу и бытовое обеспечение экспедиции.",
     icon: "Star",
+    photo: "https://cdn.poehali.dev/projects/c1009d06-e7b0-4add-9ede-190a7806a354/files/ea008094-b746-4809-9437-a3becceea855.jpg",
   },
   {
     name: "Евгений Константинович Фёдоров",
     role: "Геофизик, метеоролог",
     description: "Вёл систематические наблюдения за магнитным полем Земли, проводил астрономические определения координат.",
     icon: "Cloud",
+    photo: "https://cdn.poehali.dev/projects/c1009d06-e7b0-4add-9ede-190a7806a354/files/7091ac1b-6496-404a-bbc1-e9986f8f429e.jpg",
   },
   {
     name: "Эрнст Теодорович Кренкель",
     role: "Радист",
     description: "Обеспечивал бесперебойную радиосвязь с Большой землёй, передавая научные данные и метеосводки.",
     icon: "Radio",
+    photo: "https://cdn.poehali.dev/projects/c1009d06-e7b0-4add-9ede-190a7806a354/files/a357a209-3305-45fb-8d6a-ba7b61c0de9f.jpg",
   },
   {
     name: "Пётр Петрович Ширшов",
     role: "Гидробиолог, океанограф",
     description: "Исследовал органическую жизнь Северного Ледовитого океана, проводил гидрохимические анализы воды.",
     icon: "Waves",
+    photo: "https://cdn.poehali.dev/projects/c1009d06-e7b0-4add-9ede-190a7806a354/files/0baf3398-5fd0-4405-90af-7ecbeb420ad0.jpg",
   },
 ];
 
@@ -80,9 +84,11 @@ const SectionSP1 = () => {
               className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-6 hover:bg-white/10 transition-colors"
             >
               <div className="flex items-start gap-4">
-                <div className="shrink-0 w-10 h-10 rounded-full bg-blue-400/20 flex items-center justify-center">
-                  <Icon name={member.icon} size={18} className="text-blue-300" />
-                </div>
+                <img
+                  src={member.photo}
+                  alt={member.name}
+                  className="shrink-0 w-16 h-16 rounded-full object-cover border-2 border-blue-400/30"
+                />
                 <div>
                   <h4 className="font-serif text-lg font-bold text-white">{member.name}</h4>
                   <p className="font-sans text-sm font-medium text-blue-300 mb-2">{member.role}</p>
